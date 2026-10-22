@@ -1,5 +1,7 @@
 # ihex — Intel HEX in pure Racket
 
+**English** · [中文](README.zh-CN.md)
+
 [![CI](https://github.com/turinglambdaai/ihex/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/ihex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 `ihex` reads and writes **Intel HEX** files — the record-oriented firmware
