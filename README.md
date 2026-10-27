@@ -25,6 +25,7 @@ raco pkg install ihex
 ## Usage
 
 ```racket
+#lang racket/base
 (require ihex)
 
 (define image (bytes #xDE #xAD #xBE #xEF))
@@ -54,6 +55,30 @@ extended-linear and extended-segment bases, filling gaps with a fill byte
 (default `#xFF`) and rejecting overlaps.  `bytes->ihex` renders an image
 with configurable line length, window-boundary splitting and an optional
 start-linear record.
+
+## API documentation and development
+
+The [Scribble API reference](ihex/scribblings/ihex.scrbl) defines the
+record model, accepted record types, exact parser and writer contracts, address
+windows and error conditions. Its quickstart uses `scribble/example` and is
+evaluated during documentation builds. The
+[executable quickstart](examples/quickstart.rkt) independently verifies the
+README's image round-trip and entry-point results with synthetic data.
+
+From the repository root, with Racket and `raco` installed:
+
+```sh
+raco pkg install --auto --link .
+raco test -p ihex
+racket examples/quickstart.rkt
+raco setup -l ihex --check-pkg-deps
+```
+
+These steps are covered by the Linux/macOS/Windows CI matrix. Racket module
+path `ihex` is the public API, and neither parsing nor formatting needs
+hardware, network, a vendor toolchain or Python at runtime. For bugs, submit
+a minimal record reproducer (no proprietary firmware) to
+[GitHub Issues](https://github.com/turinglambdaai/ihex/issues).
 
 ## License
 
