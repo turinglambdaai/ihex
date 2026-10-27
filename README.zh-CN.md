@@ -53,7 +53,7 @@ raco pkg install ihex
 raco pkg install --auto --link "$(pwd)"
 raco test -p ihex
 racket examples/quickstart.rkt
-raco setup -l ihex --check-pkg-deps
+raco setup --check-pkg-deps -l ihex
 ```
 
 CI 在 Linux、macOS、Windows 上检查这些步骤。`ihex` 是公开的
