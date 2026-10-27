@@ -71,7 +71,7 @@ From the repository root, with Racket and `raco` installed:
 raco pkg install --auto --link "$(pwd)"
 raco test -p ihex
 racket examples/quickstart.rkt
-raco setup -l ihex --check-pkg-deps
+raco setup --check-pkg-deps -l ihex
 ```
 
 These steps are covered by the Linux/macOS/Windows CI matrix. Racket module
