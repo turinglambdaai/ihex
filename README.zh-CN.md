@@ -50,7 +50,7 @@ raco pkg install ihex
 安装 Racket 及 `raco` 后，在仓库根目录运行：
 
 ```sh
-raco pkg install --auto --link .
+raco pkg install --auto --link "$(pwd)"
 raco test -p ihex
 racket examples/quickstart.rkt
 raco setup -l ihex --check-pkg-deps
