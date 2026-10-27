@@ -68,7 +68,7 @@ README's image round-trip and entry-point results with synthetic data.
 From the repository root, with Racket and `raco` installed:
 
 ```sh
-raco pkg install --auto --link .
+raco pkg install --auto --link "$(pwd)"
 raco test -p ihex
 racket examples/quickstart.rkt
 raco setup -l ihex --check-pkg-deps
