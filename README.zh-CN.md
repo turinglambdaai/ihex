@@ -17,6 +17,7 @@ raco pkg install ihex
 ## 用法
 
 ```racket
+#lang racket/base
 (require ihex)
 
 (define image (bytes #xDE #xAD #xBE #xEF))
@@ -38,6 +39,28 @@ raco pkg install ihex
 ### 映像
 
 `ihex->bytes` 将数据记录组装为一个字节串，套用 extended-linear 与 extended-segment 基址，用填充字节（默认 `#xFF`）填补空洞并拒绝重叠。`bytes->ihex` 渲染映像，支持可配置的行长度、窗口边界切分以及可选的 start-linear 记录。
+
+## API 文档与开发
+
+完整的记录模型、记录类型、解析和写入契约、地址窗口及错误处理请查阅
+[Scribble API 文档](ihex/scribblings/ihex.scrbl)；文档中的
+`scribble/example` 会在构建时真实执行。
+[独立入门示例](examples/quickstart.rkt)用合成数据验证上面的映像往返和入口地址。
+
+安装 Racket 及 `raco` 后，在仓库根目录运行：
+
+```sh
+raco pkg install --auto --link "$(pwd)"
+raco test -p ihex
+racket examples/quickstart.rkt
+raco setup --check-pkg-deps -l ihex
+```
+
+CI 在 Linux、macOS、Windows 上检查这些步骤。`ihex` 是公开的
+`require` 模块路径；使用本包读写固件映像不需要硬件、网络、厂商工具
+或 Python 运行环境。如发现问题，请在
+[GitHub Issues](https://github.com/turinglambdaai/ihex/issues)
+提交脱敏的最小记录示例，避免上传专有固件数据。
 
 ## 许可证
 
