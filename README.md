@@ -2,7 +2,7 @@
 
 **English** · [中文](README.zh-CN.md)
 
-[![CI](https://github.com/turinglambdaai/ihex/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/ihex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/turlamai/ihex/actions/workflows/ci.yml/badge.svg)](https://github.com/turlamai/ihex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 `ihex` reads and writes **Intel HEX** files — the record-oriented firmware
 image format used by toolchains for 8051, MCS-96, ARM and countless other
@@ -78,7 +78,7 @@ These steps are covered by the Linux/macOS/Windows CI matrix. Racket module
 path `ihex` is the public API, and neither parsing nor formatting needs
 hardware, network, a vendor toolchain or Python at runtime. For bugs, submit
 a minimal record reproducer (no proprietary firmware) to
-[GitHub Issues](https://github.com/turinglambdaai/ihex/issues).
+[GitHub Issues](https://github.com/turlamai/ihex/issues).
 
 ## License
 

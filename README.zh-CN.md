@@ -2,7 +2,7 @@
 
 [English](README.md) · **中文**
 
-[![CI](https://github.com/turinglambdaai/ihex/actions/workflows/ci.yml/badge.svg)](https://github.com/turinglambdaai/ihex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/turlamai/ihex/actions/workflows/ci.yml/badge.svg)](https://github.com/turlamai/ihex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 `ihex` 读取和写入 **Intel HEX** 文件——面向记录的固件映像格式，被 8051、MCS-96、ARM 以及无数其他目标平台的工具链使用。
 
@@ -59,7 +59,7 @@ raco setup --check-pkg-deps -l ihex
 CI 在 Linux、macOS、Windows 上检查这些步骤。`ihex` 是公开的
 `require` 模块路径；使用本包读写固件映像不需要硬件、网络、厂商工具
 或 Python 运行环境。如发现问题，请在
-[GitHub Issues](https://github.com/turinglambdaai/ihex/issues)
+[GitHub Issues](https://github.com/turlamai/ihex/issues)
 提交脱敏的最小记录示例，避免上传专有固件数据。
 
 ## 许可证
